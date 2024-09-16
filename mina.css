@@ -1,0 +1,88 @@
+h1 {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    width: 1050px;
+    border: 5px solid #0c974a;
+    border-radius: 10px;
+    background: linear-gradient(to left, #ff6347, #4682b4, #32cd32, #ff69b4, #8a2be2, #ff4500, #ff6347);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200% auto;
+    color: transparent;
+    animation: colorMove 7s steps(500) infinite;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(251, 231, 239, 1); /* Semi-transparent background color */
+    border-radius: 10px; /* Match the border-radius of the h1 */
+    z-index: -1; /* Place it behind the text */
+}
+
+
+@keyframes colorMove {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+body
+    {
+        background-image: url(background2.gif);
+        background-attachment: fixed;
+        background-size: cover;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+        
+p
+    {
+        background-color: rgba(251, 231, 239, 1);
+        padding: 5px;
+        width: 500px;
+        border: 5px solid #0c974a;
+        border-radius: 10px;
+        margin:auto;
+        font-style: italic;
+        text-align: center;
+        line-height: 2;
+    }
+
+.wrapper 
+{
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    border: 5px solid #0c974a;    
+}
+
+.wrapper img 
+{
+    height: 100%; 
+    width: 100%; 
+    border-radius: 50%;
+    filter:brightness(0%);
+    transition: 0.3s ease;
+    cursor: pointer;
+    background-color: #0c974a;
+}
+
+.wrapper img:hover
+{
+    transform:scale(1.2);
+    filter:brightness(100%);
+}
