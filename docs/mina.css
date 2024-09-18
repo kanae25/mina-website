@@ -1,0 +1,228 @@
+*
+{
+    box-sizing: border-box;
+}
+
+@font-face 
+{
+    font-family: cute1;
+    src: url(fonts/MotleyForcesRegular-w1rZ3.ttf);
+}
+
+@font-face {
+    font-family: cute2;
+    src: url(fonts/MondayFeelings-7BD2l.ttf);
+}
+
+h1 {
+    font-family: cute1;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    width: 800px;
+    border: 5px solid #0c974a;
+    border-radius: 10px;
+    background: linear-gradient(to left, #ff6347, #4682b4, #32cd32, #ff69b4, #8a2be2, #ff4500, #ff6347);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200% auto;
+    color: transparent;
+    animation: colorMove 7s steps(500) infinite;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(226, 255, 255, 1); /* Semi-transparent background color */
+    border-radius: 5px; /* Match the border-radius of the h1 */
+    z-index: -1; /* Place it behind the text */
+}
+
+
+@keyframes colorMove {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h3
+{
+    font-family: cute2;
+    background-color: rgba(226, 255, 255, 1);
+    padding: 5px;
+    width: 300px;
+    border: 5px solid #0c974a;
+    border-radius: 10px;
+    margin:auto;
+    font-style: italic;
+    text-align: center;
+    color: #0c974a;
+    line-height: 2;
+    box-shadow: #8a2be2;
+}
+
+button
+{
+    font-family: cute2;
+    background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 999px;
+    display: block;
+    width: 200px;
+}
+
+button:hover
+{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+     
+
+body
+    {
+        background-image: url(images/background2.gif);
+        background-attachment: fixed;
+        background-size: cover;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        overscroll-behavior: none;
+    }
+        
+p
+    {
+        background-color: rgba(226, 255, 255, 1);
+        padding: 5px;
+        width: 500px;
+        border: 5px solid #0c974a;
+        border-radius: 10px;
+        margin:auto;
+        font-style: italic;
+        text-align: center;
+        color: #0c974a;
+        line-height: 2;
+    }
+
+.wrapper 
+{
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    border: 5px solid #0c974a;    
+}
+
+.wrapper img 
+{
+    height: 100%; 
+    width: 100%; 
+    border-radius: 50%;
+    filter:brightness(0%);
+    transition: 0.3s ease;
+    cursor: pointer;
+    background-color: #0c974a;
+}
+
+.wrapper img:hover
+{
+    transform:scale(1.2);
+    filter:brightness(100%);
+}
+
+h1, h3, p, button, .wrapper {
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* small ahh device */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 24px;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    h3 {
+        font-size: 18px;
+        width: 90%;
+    }
+    
+    p {
+        font-size: 16px;
+        width: 90%;
+    }
+    
+    button {
+        width: 90%;
+        font-size: 14px;
+    }
+    
+    .wrapper {
+        height: 180px;
+        width: 180px;
+    }
+}
+
+/* medium rare ahhh device (ipad kid) */
+@media (min-width: 768px) and (max-width: 1365px) {
+    h1 {
+        font-size: 32px;
+        padding: 8px;
+    }
+    
+    h3 {
+        font-size: 20px;
+        
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    button {
+        font-size: 16px;
+        width: 90%;
+    }
+    
+    .wrapper {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/* big ahhh screen (desktop) */
+@media (min-width: 1366px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+    
+    button {
+        font-size: 18px;
+    }
+}
